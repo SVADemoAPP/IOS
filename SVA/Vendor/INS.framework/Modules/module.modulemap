@@ -1,0 +1,6 @@
+framework module INS {
+  umbrella header "INS.h"
+
+  export *
+  module * { export * }
+}

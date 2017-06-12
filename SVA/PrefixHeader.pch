@@ -1,0 +1,106 @@
+//
+//  PrefixHeader.pch
+//  SVA
+//
+//  Created by Zeacone on 15/12/9.
+//  Copyright © 2015年 huawei. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__ 
+// Import third part libraries.
+#import "Masonry.h"
+#import "SMActivityBaseModel.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD.h"
+#import "SVGKit.h"
+
+// Import public classes.
+#import "SVAPopupView.h"
+#import "SVAMapView.h"
+#import "SVAMapDataViewModel.h"
+#import "SVALocationViewModel.h"
+#import "SVAPOIViewModel.h"
+#import "SVACoordinateConversion.h"
+#import "SVANetworkResource.h"
+#import "FXSVG.h"
+#import "ScaleStore.h"
+#endif
+
+
+// Get the key window of the whole application.
+#define KEY_WINDOW [UIApplication sharedApplication].keyWindow
+
+#define SCREEN_SIZE [[UIScreen mainScreen] bounds].size
+
+// Define normal key
+#define SERVER_IP_KEY @"SERVER_IP"
+
+/* Define shortcut of color setting way. */
+
+// Setting color from hex way.
+#define colorFromHex(hex, a) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:a]
+
+// Setting color from normal RGB way.
+#define colorFromRGB(r, g, b, a) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
+
+// Get global setting
+#define BASE_IP \
+(([[NSUserDefaults standardUserDefaults] objectForKey:SERVER_IP_KEY]) != nil ? [[NSUserDefaults standardUserDefaults] objectForKey:SERVER_IP_KEY] : @"http://61.91.240.238:8082")
+//#define BASE_IP (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:SERVER_IP_KEY]
+//#define BASE_IP @"http://223.202.102.66:8085"
+
+
+#define CustomLocalizedString(key,comment) \
+[[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]objectForKey:@"AppLanguage"]] ofType:@"lproj"]] localizedStringForKey:(key) value:@"" table:nil]
+
+// Normal macro
+
+/* Define shortcut of weak-strong dance */
+
+#ifndef    weakify
+#if __has_feature(objc_arc)
+
+#define weakify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+autoreleasepool{} __weak __typeof__(x) __weak_##x##__ = x; \
+_Pragma("clang diagnostic pop")
+
+#else
+
+#define weakify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+autoreleasepool{} __block __typeof__(x) __block_##x##__ = x; \
+_Pragma("clang diagnostic pop")
+
+#endif
+#endif
+
+#ifndef    strongify
+#if __has_feature(objc_arc)
+
+#define strongify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+try{} @finally{} __typeof__(x) x = __weak_##x##__; \
+_Pragma("clang diagnostic pop")
+
+#else
+
+#define strongify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+try{} @finally{} __typeof__(x) x = __block_##x##__; \
+_Pragma("clang diagnostic pop")
+
+#endif
+#endif
+
+#endif /* PrefixHeader_pch */

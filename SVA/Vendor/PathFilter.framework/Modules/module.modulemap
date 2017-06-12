@@ -1,0 +1,6 @@
+framework module PathFilter {
+  umbrella header "PathFilter.h"
+
+  export *
+  module * { export * }
+}

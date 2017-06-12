@@ -1,0 +1,61 @@
+/* 
+  Localizable.strings
+  SVA
+
+  Created by Zeacone on 15/12/28.
+  Copyright © 2015年 huawei. All rights reserved.
+*/
+
+
+"下载地图中..."="Downloading map...";
+"定位设置"="Location setting";
+
+"定位设置"="Location setting";
+"确定"="OK";
+"取消"="Cancel";
+"起点"="From";
+"终点"="To";
+"惯导参数配置"="Inheritial parameter configuration";
+"设置"="Setting";
+"通用设置"="General setting";
+"服务地址"="Service address";
+"语言选择"="Language";
+"惯导航向角"="Travel angle";
+"Ping服务"="Ping server";
+"Ping操作"="Ping operation";
+"上传方式"="Upload mode";
+"高级设置"="Advanced settings";
+"检查更新"="Update check";
+"已是最新版本"="This is the latest version";
+"保存设置"="Save configurations";
+"简体中文"="English";
+"格式错误(ip:port)"="Incorrect format (ip:port)";
+"服务器地址为空!"="Service address is null!";
+"接收推送"="Receive push notifications";
+"开/关动画"="Animation";
+"隐私授权"="Privacy authorization";
+"显示地图标尺"="Display map scale";
+"惯导辅助增强"="Inhertial navigation assistance enhancement";
+"自动切换楼层"="Automatic switching floor";
+"定位跟随"="Location tracking";
+
+"路径规划"="Path adjust";
+"路径滤波"="Path filter";
+"主航向开关"="Main head";
+"检测到网络已断开,请检查网络"="Disconnected from the network. Please check.";
+
+"口令验证"="Password verification";
+"用户名"="Username";
+"密码"="Password";
+
+"默认航向角"="Default nav angle";
+"加速度灵敏度"="ACC sensitive TH";
+"默认步长"="Default step";
+"最快速度门限"="Fastest speed TH";
+"平行误差权重"="Parallel weight";
+"垂直误差权重"="Vertical weight";
+"静止速度门限"="Static speed TH";
+"静止门限次数"="Static TH count";
+"重定位误差门限"="Reloc error TH";
+"重定位门限次数"="Reloc TH count";
+"滤波窗长"="Filter Length";

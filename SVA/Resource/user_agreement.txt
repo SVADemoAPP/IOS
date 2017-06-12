@@ -1,0 +1,12 @@
+Privacy Statement for the Huawei Indoor Navigation APP
+The Huawei Indoor Navigation APP (collectively "APP") is developed and operated by [Huawei Technologies Co. Ltd] (collectively "we"), and we fully understand that you are concerned about how your personal data will be used. This Privacy Statement (collectively “Statement”) provides information on how we use and protect your privacy and personal data while you are using the APP. Before using the APP, please read this Statement carefully and make sure that you fully understand the Statement. Your use of this APP indicates that you accept the Statement.
+What Information Do We Collect?
+When you use this APP (e.g., through cellular or WLAN networks), we will collect your IP address, location information, and timestamps.
+How Do We Use Your Personal Data?
+The APP, an indoor maps application, triangulates locations based on the UE (User Equipment such as cell phone) signal strength received by Huawei LampSite base stations, and then sends the location information to UEs. During this process, your time stamps will also be used.
+Do We Disclose Any Information to Other Parties?
+Unless otherwise required by applicable laws and regulations, or with your prior consent, we will not publicize or disclose your real location information to any third party.
+How Do We Protect Your Personal Data?
+The APP implements all reasonable measures to protect your personal data from unauthorized access, use, disclosure, loss. We store your personal data in [Vodafone Group Services Limited] (collectively "Vodafone") and delete it without undue delay after the Mobile World Conference (MWC) closes. The APP is used only on the MWC held from February 22nd to 25th, 2016. For details about how Vodafone protects your personal data, please visit Vodafone's website to obtain relevant information. 
+Will We Transfer Your Personal data to Other Countries or Regions?
+The APP is used only on the MWC held from February 22 to 25, 2016, and all personal data collected by the APP will be stored and processed by Vodafone. In addition, we require that Vodafone keep all your personal data is stored in Spain.
